@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html>
+<head>
+  </head>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+  </script>
+<style>
+body{
+  margin: 0;
+}
+
+  img{
+display: block;
+height: 300px;
+  }
+  .active{
+    background: gold;
+  }
+  #imgWrapper{
+    height: 90vh;
+    width: 100vw;
+  }
+  #imgWrapper div{
+    height: 90vh;
+    width: 100vw;
+    background-repeat:no-repeat;
+    position:absolute;
+    background-position: 50% 50%;
+    background-size: contain;
+    transition-duration: 1s;
+  }
+  </style>
+  <body>
+    <img>
+    <button onclick='$("img").attr("src", imgs[0])'> 1 </button>
+    <button onclick='$("img").attr("src", imgs[1])'> 2 </button>
+    <button onclick='$("img").attr("src", imgs[2])'> 3 </button>
+
+    </body>
+    <script>
+      var imgs = [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Acer_diabolicum_9_%28medium_crop%29.jpg/320px-Acer_diabolicum_9_%28medium_crop%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Delos_Museum_Mosaik_Dionysos_09.jpg/240px-Delos_Museum_Mosaik_Dionysos_09.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg/800px-CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg"
+      ];
+      $("img").attr("src", imgs[0])
+
+      var goToSLide = function(n)
+      {
+        var currSlide = 0;
+        $("img").attr("src", imgs[n])
+        currSlide = n;
+        $("#numWrapper button").removeClass("active")
+        $($("#numWrapper button")[currSlide]).addClass("active")
+      }
+      goToSlide(0);
+
+      </script>
+</html>

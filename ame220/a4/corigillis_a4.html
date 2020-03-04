@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: hotpink;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+</style>
+</head>
+
+<body style="background-color:#f2f2f2;">
+
+<h2 style="font-family:arial black;">
+  <center>
+    <font color="hotpink">Cori Gillis
+    </font>
+  </center>
+</h2>
+
+<button class="accordion">Information</button>
+<div class="panel">
+  <p style="font-family:arial;">
+      Email: <a href="mailto:corigillis@me.com">corigillis@me.com</a>
+    <br>
+    Phone: <a href="tel:5099945292">509-994-5292</a>
+    <br>
+    Address: <a href="712 S. Forest Ave. Tempe, AZ 85281">712 S. Forest Ave. Tempe, AZ 85281</a>
+</p>
+</div>
+
+<button class="accordion">Objective</button>
+<div class="panel">
+  <p style="font-family:arial;">
+    Apply my demonstrated leadership, communication, organizational and customer service skills in order to deliver positive energy and exceed customer expectations. Work well as part of a team or independently.
+</p>
+</div>
+
+<button class="accordion">Education</button>
+<div class="panel">
+  <p>      <table style="font-family:arial;">
+        <tr>
+          <th> School </th>
+          <th> Years Attended </th>
+        </tr>
+        <tr>
+          <td> Lewis and Clark High School </td>
+          <td> 2013 - 2017 </td>
+        </tr>
+        <tr>
+          <td> Seattle Central College </td>
+            <td> 2017 - 2018 </td>
+        </tr>
+        <tr>
+          <td> Arizona State University </td>
+          <td> 2018 - present </td>
+        </tr>
+      </table></p>
+</div>
+
+<button class="accordion">Experience</button>
+<div class="panel">
+  <p>      <ol style="font-family:arial;">
+        <li>Forever 21</li>
+
+        <ul>
+          <li> Worked as a sales associate.</li>
+          <li> Maintained the cleanliness of the store. </li>
+          <li> Oversaw transactions of customers and employees. </li>
+        </ul>
+        <li>Aviv Hummus Bar</li>
+        <ul>
+          <li> Worked as an expo, server, and line cook.</li>
+          <li> Helped serve, make food, and expo. </li>
+          <li> Handled multiple orders at a single time in a high pressure situation when the restaurant was very busy. </li>
+        </ul>
+        <li>Coeur D'Alene Resort</li>
+        <ul>
+          <li> Worked as a cocktail server.</li>
+          <li> Helped serve drinks to upper class buisness people. </li>
+          <li> Helped bartend when bartenders were placed in high pressure situations. </li>
+        </ul>
+        <li>ASU Alpha Phi Director of Merchandising</li>
+        <ul>
+          <li> Design and distribute shirts for ASU Alpha Phi sorority.</li>
+          <li> Works with various merchandising companies to create shirts and other merchandise for the sorority. </li>
+        </ul>
+      </ol></p>
+</div>
+
+<button class="accordion">References</button>
+<div class="panel">
+  <p>      <ul style="font-family:arial;">
+        <li> Erin Schwebs
+        <br> 509-496-9769
+      </li>
+      <li> Justin Schorzman
+      <br> 208-765-2300
+      </li>
+      <li> Micaela Posey
+      <br> 509-389-6847
+      </li>
+      </ul>
+  </p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
